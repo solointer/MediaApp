@@ -1,0 +1,21 @@
+body {
+  background: transparent url(/img/login_bg.jpg) no-repeat scroll center -150px;
+}
+
+.wrap .board {
+  background-image: url(img/login_board_border.png) !important;
+  background-repeat: no-repeat;
+  width: 608px;
+  height: 322px;
+  margin: 0 auto;
+  margin-top: 15%;
+}
+
+.wrap .board .content {
+  background: transparent url(img/login_board_bg.jpg) no-repeat scroll 0 0;
+  position: relative;
+  left: 15px;
+  top: 18px;
+  width: 578px;
+  height: 288px;
+}
