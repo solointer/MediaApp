@@ -1,48 +1,54 @@
-<!DOCTYPE HTML>
+ <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" href="/css/common-960db5b52e.css" type="text/css"/>
-    <link href="/css/header-97bc4b2287.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="/css/common.css" type="text/css"/>
+    <link href="/css/header.css" rel="stylesheet" type="text/css"/>
+   
     <title>多媒体信息管理系统</title>
 </head>
 <body>
 <div>
-    <div class="navi_body">
-        <div class="navi_head">
-            <div style="width:80%; margin-left:auto; margin-right:auto;">
-                <span>
-                        <p class="navi_title">首页</p>
-                </span>
-                <span>
-						<p class="navi_title"><img src="/img/header/WebResource.png"/>关于我们</p>
-						<p><img src="/img/header/ico32_terminal.png"/><a href="">团队介绍</a></p>
-						<p><a href="">服务QQ群</a></p>
-						<p><a href="">个人业务</a></p>
+		<div class="navi_body"  th:fragment="header">
+			<div class="navi_head">
+				<div style="width:80%; margin-left:auto; margin-right:auto;">
+					<span>
+						<p class="navi_title">首页</p>
 					</span>
-                <span>
-						<p class="navi_title">软件下载</p>
-						<p><a href="">WEB编译工具</a></p>
-						<p><a href="">桌面整理工具</a></p>
+					<span>
+						<p class="navi_title">终端管理</p>
+						<p><a href="">终端管理</a></p>
+						<p><a href="">终端监控</a></p>
+						<p><a href="">终端日志</a></p>
 					</span>
-                <span>
-						<p class="navi_title">招贤纳士</p>
-						<p><a href="">WEB前端工程师</a></p>
-						<p><a href="">JAVAWEB工程师</a></p>
-						<p><a href="">APP开发工程师</a></p>
-						<p><a href="">数据库工程师</a></p>
-						<p><a href="">软件架构师</a></p>
-						<p><a href="">技术客服</a></p>
+					<span>
+						<p class="navi_title">媒体与节目</p>
+						<p><a href="">媒体中心</a></p>
+						<p><a href="">模板制作</a></p>
+						<p><a href="">节目制作</a></p>
+						<p><a href="">节目发布</a></p>
 					</span>
-                <span>
-						<p class="navi_title">给我留言</p>
-						<p><a href="">站内留言</a></p>
-						<p><a href="">站长信箱</a></p>
+					<span>
+						<p class="navi_title">订单与计费</p>
+						<p><a href="">计费策略</a></p>
+						<p><a href="">客户管理</a></p>
+						<p><a href="">订单管理</a></p>
+						<p><a href="">订单报表</a></p>
+						<p><a href="">费用报表</a></p>
 					</span>
-            </div>
-        </div>
-    </div>
-</div>
-
-</body>
-</html>
+					<span>
+						<p class="navi_title">系统管理</p>
+						<p><a href="">角色管理</a></p>
+						<p><a href="">用户管理</a></p>
+						<p><a href="">操作日志</a></p>
+						<p><a href="">统计汇总</a></p>
+						<p><a href="">天气预报</a></p>
+						<p><a href="">系统参数</a></p>
+						<p><a href="">系统维护</a></p>
+						<p><a href="">系统信息</a></p>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+ </body></html>
