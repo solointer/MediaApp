@@ -4,19 +4,36 @@
     <title></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     
-<link rel="stylesheet" href="/css/common-960db5b52e.css" type="text/css"/>
-<link href="/css/login-0c1c3c85a3.css" rel="stylesheet" type="text/css"/>
-
+<!--<link rel="stylesheet" href="/src/main/resources/static/css/common-960db5b52e.css" type="text/css"/>-->
+<!--<link href="/src/main/resources/static/css/login-d9fa2e60b0.css" rel="stylesheet" type="text/css"/>-->
+    <link rel="stylesheet" href="/css/common-960db5b52e.css" type="text/css"/>
+    <link href="/css/login-d9fa2e60b0.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-   	<div class="wrap">
-   	<from action="" method="post">
-   		<div class="board">
-   			<div class="content">
-   				
-   			</div>
-   		</div>
-   	</from>	
-   	</div>
+    <div class="container">
+      <div class="board">
+        <div class="content">
+          <div class="logo">  
+          </div>
+          <form th:action="@{/list}" th:object="${userLoginForm}" th:method="get" class="form-horizontal login-from">
+          <div class="from-item">
+            <label  class="col-sm-2">账户:</label>
+            <div class="col-sm-3">
+              <input type="text" class="form-control" name="account" placeholder="用户名" value="" th:value="*{account}"/>
+            </div>
+          </div>
+          <div class="from-item">
+            <label  class="col-sm-2">密码:</label>
+            <div class="col-sm-3">
+              <input type="text" class="form-control" name="password" placeholder="密码" value="" th:value="*{password}"/>
+            </div>
+          </div>
+           <div class="form-actions">
+                        <input type="submit" class="btn uppercase" value="登&nbsp;&nbsp;录"/>
+             </div>
+          </form> 
+        </div>
+      </div>
+    </div>
 </body>
 </html>

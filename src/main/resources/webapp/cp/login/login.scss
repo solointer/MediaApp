@@ -1,0 +1,61 @@
+
+$LOGIN_BG: '/img/login_bg.jpg';
+$LOGIN_BOARD_BORDER: '/img/login_board_border.png';
+$LOGIN_LOGO_BUS: '/img/login_logo_bus.gif';
+$LOGIN_BOARD_BG: '/img/login_board_bg.jpg';
+body {
+  //background: transparent url(/img/login_bg.jpg) no-repeat scroll center -150px;
+  background: transparent url($LOGIN_BG) no-repeat scroll center -150px;
+}
+
+.container{
+  padding-top: 15%;
+}
+.container .board {
+  background-image: url($LOGIN_BOARD_BORDER) !important;
+  background-repeat: no-repeat;
+  width: 608px;
+  height: 322px;
+  margin: 0 auto;
+}
+
+.container .board .logo {
+  background: url($LOGIN_LOGO_BUS);
+  background-repeat: no-repeat;
+  width: 252px;
+  height: 22px;
+  position: absolute;
+  bottom: 15px;
+  left: 30px;
+}
+
+.container .board .content {
+  background: transparent url($LOGIN_BOARD_BG) no-repeat scroll 0 0;
+  position: relative;
+  left: 15px;
+  top: 18px;
+  width: 578px;
+  height: 288px;
+}
+.container .board .content .login-from{
+    width: 230px;
+    position: relative;
+    left: 350px;
+    top: 165px;
+}
+
+.login-from input{
+  border: 1px solid #0ba9e9;
+  width: 122px;
+  height: 18px;
+}
+.login-from label{
+  width: 77px;
+  float: left;
+}
+.login-from .from-item{
+    font: normal 12px tahoma, arial, helvetica, sans-serif;
+    display: block;
+    margin-bottom: 4px;
+    zoom: 1;
+}

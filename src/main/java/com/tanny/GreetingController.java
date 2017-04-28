@@ -21,5 +21,10 @@ public class GreetingController {
         model.addAttribute("name", name);
         return "/cp/login/login";
     }
+    @RequestMapping("/index")
+    public String index(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
+        model.addAttribute("name", name);
+        return "/cp/index/index";
+    }
 
 }
