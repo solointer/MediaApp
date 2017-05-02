@@ -39,3 +39,7 @@
 
             @EnableJpaRepositories("com.dao") // JPA扫描该包路径下的Repositorie
             @EntityScan("com.model") // 扫描实体类
+
+### 使用spa连接数据库每次删除相关的表报错table doesn't exist
+
+      spring.jpa.properties.hibernate.hbm2ddl.auto=update            

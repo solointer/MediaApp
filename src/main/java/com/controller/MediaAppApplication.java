@@ -10,7 +10,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @ComponentScan("com.controller, com.service, com.dao, com.model")
-@EnableJpaRepositories("com.dao") // JPA扫描该包路径下的Repositorie
+@EnableJpaRepositories({"com.dao","com.repository"}) // JPA扫描该包路径下的Repositorie
 @EntityScan("com.model") // 扫描实体类
 public class MediaAppApplication {
 

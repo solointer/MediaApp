@@ -1,4 +1,6 @@
 package com.controller;
+import java.util.List;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -17,14 +19,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.entity.Person;
 import com.form.UserLoginForm;
+import com.model.User;
 import com.service.UserService;
+import com.service.UserServiceImpl;
 
 
 @Controller
 public class LoginController {
 
 	@Resource
-	UserService userService;
+	UserServiceImpl userService2;
 
 	 // @RequestMapping(path = "/login", method = RequestMethod.GET)
 	  @RequestMapping(value = "/login")
@@ -43,13 +47,17 @@ public class LoginController {
 		  System.out.print("-----------");
 		  System.out.print(userLoginForm.getAccount());
 		  System.out.print(userLoginForm.getPassword());
-		  System.out.println(userService);
+		  System.out.println(userService2);
 //	    	return "/cp/index/index";
-	        Person person = userService.checkLoginUser(userLoginForm.getAccount(),userLoginForm.getPassword());
+	       List<User> user = userService2.findByName(userLoginForm.getAccount(),userLoginForm.getPassword());
 	        //System.out.println(person.getAccount());
+	        System.out.println(user);
+	      
 	        
-	        if (person!=null) {
-				session.setAttribute("user",person);
+	            user.get(0).getAccount();  
+	            //System.out.println(list.get(i));  
+	        if (user.get(0)!=null) {
+				session.setAttribute("user",user);
 				return "/cp/index/index";
 			} else {
 				model.addAttribute("loginError", "login.error");

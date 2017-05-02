@@ -53,5 +53,8 @@ public abstract class BaseDao<T> {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	public void add(Session session,String name){
+		session.save(name);
+	}
 	
 }
