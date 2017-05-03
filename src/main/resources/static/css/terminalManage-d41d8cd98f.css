@@ -64,5 +64,18 @@
   display: inline-block;
   width: 20%;
   height: 30px;
+  cursor: pointer;
 }
 
+.list li{
+  height:25px;
+  width: 100%;
+  line-height:25px;
+  cursor: pointer;
+}
+.list li:hover{
+  background: #DADADA;
+}
+.list .selected{
+  background: #F7F6C1;
+}

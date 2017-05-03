@@ -5,7 +5,7 @@ import java.util.List;
 import com.model.User;
 
 public interface IUserService {
-	  public List<User> findAll();
+	  	public List<User> findAll();
 
 	    public void saveUser(User book);
 	   

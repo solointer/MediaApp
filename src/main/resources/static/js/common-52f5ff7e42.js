@@ -1,0 +1,1 @@
+function requestAjax(t,e,n,o){e=e||"text",o=o||$.noop,$.ajax({type:"POST",url:t,dataType:e,success:function(t){n(t)},error:function(){o()}})}

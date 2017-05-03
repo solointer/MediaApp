@@ -1,0 +1,90 @@
+`tb_audit_log`, 显示终端接入审批表
+
+`tb_charge_actual_play_bill`, 终端播放实际收费明细 
+`tb_charge_plan_play_bill`, 终端播放计划明细单
+`tb_charge_bb_actual_day`, 客户实际播放广告收费明细
+`tb_charge_bb_plan_day`,  客户计划播放广告费用明细
+`tb_charge_customer_groups`, 客户分组信息
+`tb_charge_customer_info`, 客户信息
+`tb_charge_customer_users`, 客户用户对应表
+`tb_charge_date_weight`, 日期收费权重（节假日权重大）
+`tb_charge_order_info`, 客户订单审批表
+`tb_charge_order_report`, 客户订单收费报表
+`tb_charge_order_weight`, 客户订单收费标准
+`tb_charge_play_info`, 广告播放请求单
+`tb_charge_tag_weight`, 标签收费权重表
+`tb_charge_terminal_weight`, 终端收费权重表
+`tb_charge_time_weight`, 时间收费权重表
+
+`tb_corp_info`, 企业信息表（基本没用）
+`tb_customer_group_info`, 客户分组信息表
+`tb_customer_group_relations`, 客户分组关系表
+
+
+`tb_led_group_info`, LED点阵屏分组信息表
+`tb_led_group_program`, LED点阵屏组节目信息表
+`tb_led_program_list`, LED点阵屏节目列表
+`tb_led_terminal_command`, LED点阵屏终端命令
+`tb_led_terminal_config`, LED点阵屏终端配置
+`tb_led_terminal_info`, LED点阵屏终端描述信息
+`tb_led_text_info`, LED点阵屏终端文本区域信息
+`tb_led_time_info`, LED点阵屏终端时间信息
+
+`tb_media_export_task`, 多媒体导出任务表
+`tb_media_file_info`, 多媒体文件信息
+`tb_media_files`, 多媒体和文件对应表
+`tb_media_folder_info`, 多媒体文件夹
+`tb_media_folder_relations`, 多媒体文件夹对应表
+`tb_media_info`, 多媒体信息表
+`tb_media_relations`, 多媒体关系表
+
+`tb_playbill_info`, 节目播放清单
+`tb_playbill_periods`, 节目播放周期
+`tb_playbill_schedule_info`, 节目播放编排表
+`tb_playbill_schedule_play`, 节目播放编排与播放对应表
+`tb_playbill_schedule_targets`, 节目播放编排与播放终端的对应关系
+`tb_playbill_targets`, 节目播放终端表
+
+`tb_plugins_info`, 服务器上运行的插件信息表
+
+`tb_server_task`, 服务器任务表
+
+`tb_system_config`, 系统设置信息
+`tb_system_log`, 系统的log信息
+
+`tb_tag_index`, 标签索引表
+`tb_tag_info`, 标签信息表
+`tb_tag_objects`, 标签对象对应表
+
+
+`tb_terminal_command`, 终端指令队列表
+`tb_terminal_config`, 终端配置信息
+`tb_terminal_download_log`, 终端下载log信息
+`tb_terminal_group_info`, 终端分组信息
+`tb_terminal_group_relations`, 终端分组结构关系对应表
+`tb_terminal_info`, 终端信息列表
+`tb_terminal_log`, 终端log信息
+`tb_terminal_mac`, 终端mac表
+`tb_terminal_periods`, 终端有效期信息
+`tb_terminal_play_log`, 终端节目播放log信息
+`tb_terminal_status`, 终端状态
+`tb_terminal_upgrade_pkg`, 终端播放器升级包
+`tb_terminal_upgrade_schedule`, 终端播放器升级计划
+`tb_terminal_upgrade_schedule_cmds`, 终端播放器升级计划与对应的命令
+`tb_terminal_upgrade_schedule_pkgs`, 终端播放器升级计划与升级包对应关系
+`tb_terminal_upgrade_schedule_targets`, 终端播放器升级计划与终端对应关系
+
+
+`tb_user_config`, 服务器用户配置
+`tb_user_group_info`, 服务器用户组信息
+`tb_user_groups`, 服务器用户与用户组的对应关系
+`tb_user_info`, 服务器用户信息
+`tb_user_log`, 服务器用户的log信息
+`tb_user_online`, 服务器用户在线信息
+`tb_user_possession`, 服务器用户持有对象对应表
+`tb_user_properties`, 服务器用户属性
+`tb_user_relations`, 服务器用户之间关系表
+`tb_user_role_info`, 用户角色信息表
+`tb_user_role_privileges`, 用户角色权限表
+
+`tb_weather_forecast`, 天气预报信息表
