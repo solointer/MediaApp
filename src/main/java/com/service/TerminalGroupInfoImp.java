@@ -52,5 +52,11 @@ public class TerminalGroupInfoImp  implements TerminalGroupInfoService{
 		// TODO Auto-generated method stub
 		terminalGroupInfoRepository.deleteByParentId(parent_id);
 	}
+
+	@Override
+	public void updateGroup(Integer id, String name) {
+		// TODO Auto-generated method stub
+		terminalGroupInfoRepository.updateGroup(id, name);
+	}
 	
 }

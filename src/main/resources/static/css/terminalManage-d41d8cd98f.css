@@ -1,8 +1,3 @@
-/*选项卡切换*/
-#app{
-	margin-top: 50px;
-    position: absolute;
-}
 .container,
 .container * {
   box-sizing: border-box;
@@ -10,7 +5,7 @@
 
 .container {
   width: 400px;
-  height: 600px;
+  height:100%;
   border: 1px solid #999;
 }
 
@@ -31,6 +26,7 @@
   color: #333;
   text-align: center;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 .tab-title-item.active {
@@ -45,20 +41,14 @@
 .tab-content-item.active {
   display: block;
 }
-
+/*
 .terminal_group,
 .terminal_tag {
   padding: 10px;
   height: 300px;
   width: 400px;
 }
-
-.terminal_group{
-  background-color: red;
-}
-.terminal_tag {
-  background-color: yellow;
-}
+*/
 /*左侧导航头部*/
 .operateMenu li {
   display: inline-block;
@@ -79,3 +69,55 @@
 .list .selected{
   background: #F7F6C1;
 }
+
+/*选项卡切换*/
+#terminalManage{
+  position: absolute;
+  top: 50px;
+  left: 0;
+  bottom: 0;
+}
+#terminalList{
+	position: absolute;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    left: 400px;
+}
+
+.center{
+    position: absolute;
+    bottom: 20px;
+    margin: 0 auto;
+    left: 40%;
+}
+#tab{overflow:hidden;zoom:1;background:#000;border:1px solid #000;}
+#tab li{float:left;color:#fff;height:30px;cursor:pointer;line-height:30px;list-style-type:none;padding:0 20px;}
+#tab li.current{color:#000;background:#ccc;}
+#content{border:1px solid #000;border-top-width:0;}
+#content ul{line-height:25px;display:none;margin:0 30px;padding:10px 0;}
+#content>ul:first-child{
+  display: block;
+}
+
+/*右侧终端列表
+#listDisplay {
+  width: 70%;
+  height: 600px;
+  position: absolute;
+  margin-top: 50px;
+  left: 400px;
+}
+
+#terminalList2{
+  height: 600px;
+  position: absolute;
+  margin-top: 50px;
+  left: 400px;
+}
+#terminalList>div{
+  width:100%;
+}
+
+
+*/

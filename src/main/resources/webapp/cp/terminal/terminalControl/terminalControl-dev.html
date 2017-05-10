@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="/lib/bower_components/remodal/remodal.css">
     <link rel="stylesheet" href="/lib/bower_components/remodal/remodal-default-theme.css">
     <link rel="stylesheet" href="/lib/bower_components/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="/css/base-d41d8cd98f.css" type="text/css"/>
     <link rel="stylesheet" href="/css/common.css" type="text/css"/>
     <link href="/css/header.css" rel="stylesheet" type="text/css"/>
     <link href="/css/terminalManage.css" rel="stylesheet" type="text/css"/>
@@ -15,23 +14,17 @@
 <div   class="wrapper"  role="navigation">
     <div th:replace="/cp/common/header/header :: header">Header</div>
 </div>
-<div id="terminalManage"></div>
-<div id="listDisplay">
-    <div id="terminalList"></div>
-    <div class="page relative center">
-        <ul id="project-page" style="cursor:pointer;"></ul>
-        <div class="page-mask" style="display: none;"></div>
-    </div>
-</div>
+<div id="app"></div>
+<div id="terminalList"></div>
+<script src="/lib/bower_components/jquery/jquery.min.js"></script>
 <script src="/lib/bower_components/react-15.3.0/build/react.js" type="text/javascript"></script>
 <script src="/lib/bower_components/react-15.3.0/build/react-dom.js" type="text/javascript"></script>
 <script src="/lib/bower_components/react-15.3.0/build/browser.min.js" type="text/javascript"></script>
-<script src="/lib/bower_components/jquery/jquery.min.js"></script>
-<script src="/lib/bootstrap-paginator.js"></script>
 <script src="/lib/bower_components/remodal/remodal.min.js"></script>
-<script src="/js/common.js"></script>
+<script src="/js-dev/common.js"></script>
 <script src="/js-dev/pagenation.js"></script>
+
 <script type="text/javascript" src="/js/terminalManage.js"></script>
-<script type="text/javascript" src="/js/terminalList.js"></script>
+<script type="text/javascript" src="/js/terminalControlList.js"></script>
 </body>
 </html>

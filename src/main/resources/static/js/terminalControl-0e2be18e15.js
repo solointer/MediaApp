@@ -198,11 +198,6 @@
             },
             //获取选中的父分组
             getSelectedParentGroup: function getSelectedParentGroup(groupId) {
-                console.log($('#terminalTableDispaly'));
-                $('#terminalTableDisplay').attr("data-groupId", groupId);
-                var terminalTableDisplay = document.getElementById("terminalTableDisplay");
-                terminalTableDisplay.setAttribute("data-groupId", groupId);
-                alert(terminalTableDisplay.getAttribute("data-groupId"));
                 return this.setState({ selectedTermianlGroup: groupId });
             },
             //终端标签

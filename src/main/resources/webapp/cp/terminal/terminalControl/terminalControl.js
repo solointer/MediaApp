@@ -1,11 +1,13 @@
  var taskListPub = new Deliver();
  var tagListPub = new Deliver();
-
-//实现选项卡的切换
 var TabsControl = React.createClass({
+    // getInitialState: function(){
+    //     return {currentIndex: 0}
+    // },
     getTitleItemCssClasses: function(index){
         return index === this.props.currentIndex ? "tab-title-item active" : "tab-title-item";
     },
+
     getContentItemCssClasses: function(index){
         return index === this.props.currentIndex ? "tab-content-item active" : "tab-content-item";
     },
@@ -37,7 +39,7 @@ var Tab = React.createClass({
         return (<div>{this.props.children}</div>);
     }
 });
-//终端分组头部组件
+
 var GroupHeader = React.createClass({
     render:function () {
         return(
@@ -52,7 +54,6 @@ var GroupHeader = React.createClass({
 
     }
 });
-//终端标签头部
  var TagHeader = React.createClass({
      render:function () {
          return(
@@ -72,8 +73,7 @@ var Remodal = React.createClass({
 
     addGroup:function () {
         var groupName = $("#name").val();
-        modalUpdateGroup.close();
-       this.props.remodalDate.createGroup(groupName);
+       this.props.remodalDate.createGroup(groupName)
     },
     render:function () {
         let that = this;
@@ -81,6 +81,7 @@ var Remodal = React.createClass({
             <div className="remodal-bg">
                 <div className="remodal" data-remodal-id="modal">
                     <button data-remodal-action="close" className="remodal-close"></button>
+                    <h1>Remodal</h1>
                     <p>
                         {this.props.remodalDate.text}
                     </p>
@@ -101,7 +102,7 @@ var Remodal = React.createClass({
  var UpdateGroupRemodal = React.createClass({
      updateGroup:function () {
          var groupName = $("#newGroupName").val();
-         inst.close();
+         inst.clsose();
          this.props.updateGroup(groupName)
      },
      render:function () {
@@ -192,7 +193,6 @@ var List = React.createClass({
     getParentNum:function (parentId) {
         if(this.props.groupData){
             this.props.getSelectedParentGroup(parentId);
-            this.props.updateThisGroup(parentId);
         }
     },
     render:function () {
@@ -277,15 +277,6 @@ var App = React.createClass({
     getSelectedParentGroup:function (parentId) {
         return this.setState({selectedParentGroup:parentId})
     },
-    updateThisGroup:function (id) {
-        requestAjax( 'getTerminalByGroupId?id='+this.state.selectedParentGroup, 'json', function( stateObj ) {
-            if(!stateObj){
-                stateObj.data = [];
-            }
-            terminalListPub.deliver(stateObj.data);
-        } );
-
-    },
     //
     getSelectedTagId:function (id) {
         return this.setState({selectedTagId:id})
@@ -328,13 +319,12 @@ var App = React.createClass({
             selectedParentGroup:this.state.selectedParentGroup,
             createGroup:this.createGroup
         };
-
         return (<div className="container">
             <TabsControl baseWidth={400} tagChange = {this.tagChange} currentIndex = {this.state.currentIndex}>
                 <Tab name="终端分组">
                     <GroupHeader deleteGroup={this.deleteGroup}/>
                     {/*<div className="terminal_group">我是终端分组</div>*/}
-                    <List groupData={this.state.groupData} getSelectedParentGroup={this.getSelectedParentGroup} updateThisGroup={this.updateThisGroup}/>
+                    <List groupData={this.state.groupData} getSelectedParentGroup={this.getSelectedParentGroup}/>
                 </Tab>
                 <Tab name="终端标签">
                     <TagHeader deleteTag={this.deleteTag}/>
@@ -355,7 +345,29 @@ ReactDOM.render(
     document.getElementById('app')
 );
 
- var modalUpdateGroup = $('[data-remodal-id=modal]').remodal();
+// $(document).on('opening', '.remodal', function () {
+//     console.log('opening');
+// });
+//
+// $(document).on('opened', '.remodal', function () {
+//     console.log('opened');
+// });
+//
+// $(document).on('closing', '.remodal', function (e) {
+//     console.log('closing' + (e.reason ? ', reason: ' + e.reason : ''));
+// });
+//
+// $(document).on('closed', '.remodal', function (e) {
+//     console.log('closed' + (e.reason ? ', reason: ' + e.reason : ''));
+// });
+//
+// $(document).on('confirmation', '.remodal', function () {
+//     console.log('confirmation');
+// });
+//
+// $(document).on('cancellation', '.remodal', function () {
+//     console.log('cancellation');
+// });
  var inst = $('[data-remodal-id=modalUpdate]').remodal();
  var modalUpdateTag = $('[data-remodal-id=modalUpdateTag]').remodal();
  var createTagRemodal = $('[data-remodal-id=createTagRemodal]').remodal();
@@ -377,3 +389,21 @@ requestAjax( 'getAllGroup', 'json', function( stateObj ) {
      });
 
  });
+ // requestAjax( 'getAllTags', 'json', function( stateObj ) {
+//     // if( stateObj.bizNo > 0 ) {
+//     //     //无论是否成功都去更新状态
+//     //     fillTalbeConfig( stateObj.netConf );
+//     //     mySlider.bootstrapSlider( 'setValue', stateObj.netConf.bandwidth );
+//     //     if( stateObj.netConfNo > 0 ) {
+//     //         $loading.hide();
+//     //         pop.success( '修改成功!' );
+//     //     } else {
+//     //         pop.error( '修改失败!' );
+//     //     }
+//     // } else {
+//     //     pop.error( bizMsg );
+//     // }
+//     // $loading.hide();
+//     // $( '#configModel' ).modal( 'hide' );
+//     taskListPub.deliver(stateObj.data);
+// } );

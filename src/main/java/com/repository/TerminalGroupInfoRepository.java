@@ -15,7 +15,11 @@ import com.model.User;
 public interface TerminalGroupInfoRepository extends Repository<TerminalGroupInfo, Integer> {
 	 @Query(value = "select id from TerminalGroupInfo u order by id desc limit 1" ,nativeQuery=true)
 	 Integer getMaxId();
+
 	 @Modifying
 	 @Query(value = "delete from TerminalGroupInfo u where u.parent_id=:parent_id ")
 	 void deleteByParentId(@Param("parent_id") Integer parent_id);
+	 @Modifying
+	 @Query(value = "update  TerminalGroupInfo u set u.name=:name  where u.id=:id ")
+	 void updateGroup(@Param("id") Integer id,@Param("name") String name);
 }
